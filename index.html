@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Binita, from Mayank</title>
+
+<!-- Google Fonts: a soft rounded display face + a gentle body face -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================= -->
+  <!-- LOADING SCREEN -->
+  <!-- ============================= -->
+  <div id="loader">
+    <div class="loader-sky">
+      <div class="loader-cloud c1"></div>
+      <div class="loader-cloud c2"></div>
+      <div class="loader-cloud c3"></div>
+    </div>
+    <div class="loader-heart">💙</div>
+    <p class="loader-text">Preparing a tiny surprise...</p>
+  </div>
+
+  <!-- Cursor-follow hearts live here -->
+  <div id="cursor-heart-layer" aria-hidden="true"></div>
+
+  <!-- Ambient floating hearts that drift upward across the whole page -->
+  <div id="ambient-hearts" aria-hidden="true"></div>
+
+  <!-- Music toggle -->
+  <button id="music-toggle" aria-label="Toggle background music">
+    <span class="note-icon">🎵</span>
+  </button>
+  <audio id="bg-music" src="assets/music.mp3" loop preload="none"></audio>
+
+  <!-- Scroll progress dots -->
+  <nav id="progress-dots" aria-hidden="true">
+    <span data-target="0"></span>
+    <span data-target="1"></span>
+    <span data-target="2"></span>
+    <span data-target="3"></span>
+    <span data-target="4"></span>
+    <span data-target="5"></span>
+    <span data-target="6"></span>
+    <span data-target="7"></span>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============================= -->
+    <!-- HOME SECTION -->
+    <!-- ============================= -->
+    <section class="panel sky-panel" id="section-home" data-index="0">
+      <div class="sun-rays" aria-hidden="true"></div>
+      <div class="cloud-layer" aria-hidden="true">
+        <div class="cloud cloud-a"></div>
+        <div class="cloud cloud-b"></div>
+        <div class="cloud cloud-c"></div>
+        <div class="cloud cloud-d"></div>
+      </div>
+      <div class="bird bird-1" aria-hidden="true">^</div>
+      <div class="bird bird-2" aria-hidden="true">^</div>
+
+      <div class="panel-content home-content">
+        <h1 class="reveal-line big-heading">Hi Binita <span class="wave">:)</span></h1>
+        <h2 class="reveal-line big-heading delay-1">I want you to feel something I have for you.</h2>
+        <p class="reveal-line small-note delay-2">Just keep scrolling.</p>
+        <div class="scroll-arrow" aria-hidden="true">⌄</div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SECTION 2 -->
+    <!-- ============================= -->
+    <section class="panel sky-panel-soft" id="section-2" data-index="1">
+      <div class="cloud-layer" aria-hidden="true">
+        <div class="cloud cloud-e"></div>
+        <div class="cloud cloud-f"></div>
+      </div>
+      <div class="panel-content">
+        <h2 class="reveal-up section-title">I wanted to tell you something...</h2>
+        <div class="glass-card reveal-up">
+          <p>There wasn't one big moment.</p>
+          <p>No movie scene.</p>
+          <p>No dramatic beginning.</p>
+          <p>Just many small things that quietly made you special to me.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SECTION 3 : WHY YOU -->
+    <!-- ============================= -->
+    <section class="panel sky-panel" id="section-3" data-index="2">
+      <div class="cloud-layer" aria-hidden="true">
+        <div class="cloud cloud-g"></div>
+      </div>
+      <div class="panel-content wide">
+        <h2 class="reveal-up section-title">Why You?</h2>
+        <div class="cards-grid">
+          <div class="why-card reveal-up">
+            <span class="why-emoji">🌸</span>
+            <p>Your smile somehow makes everything around you feel lighter.</p>
+          </div>
+          <div class="why-card reveal-up">
+            <span class="why-emoji">☁️</span>
+            <p>The way you talk is calm, kind and comforting.</p>
+          </div>
+          <div class="why-card reveal-up">
+            <span class="why-emoji">✨</span>
+            <p>You don't even realize how effortlessly beautiful you are.</p>
+          </div>
+          <div class="why-card reveal-up">
+            <span class="why-emoji">💙</span>
+            <p>Being around you simply feels... nice.</p>
+          </div>
+          <div class="why-card reveal-up wide-card">
+            <span class="why-emoji">🌈</span>
+            <p>I never searched for someone.<br>But sometimes I find myself smiling while thinking about you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SECTION 4 : WORD CLOUDS -->
+    <!-- ============================= -->
+    <section class="panel sky-panel-soft" id="section-4" data-index="3">
+      <div class="panel-content">
+        <h2 class="reveal-up section-title">If I had to describe you...</h2>
+        <div id="word-cloud-field" aria-hidden="false">
+          <!-- word clouds injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SECTION 5 : SUNSET -->
+    <!-- ============================= -->
+    <section class="panel sunset-panel" id="section-5" data-index="4">
+      <div class="cloud-layer" aria-hidden="true">
+        <div class="cloud cloud-sunset-a"></div>
+        <div class="cloud cloud-sunset-b"></div>
+      </div>
+      <div class="panel-content">
+        <h2 class="reveal-line future-line">I don't know what the future looks like.</h2>
+        <h2 class="reveal-line future-line delay-1">But...</h2>
+        <h2 class="reveal-line future-line delay-2">I know I'd love the chance to know you better and want to be a memorable part of your life.</h2>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SECTION 6 : LETTER -->
+    <!-- ============================= -->
+    <section class="panel sky-panel-soft" id="section-6" data-index="5">
+      <div class="panel-content">
+        <div class="letter" id="letter">
+          <div class="letter-fold-top"></div>
+          <div class="letter-paper">
+            <p class="letter-line">Hi,</p>
+            <p class="letter-line">I spent a long time wondering whether I should tell you this.</p>
+            <p class="letter-line">Maybe this website is a little unexpected.</p>
+            <p class="letter-line">Maybe it's a little silly.</p>
+            <p class="letter-line">But I wanted to be honest.</p>
+            <p class="letter-line">I like the way you smile.</p>
+            <p class="letter-line">I like the way you carry yourself.</p>
+            <p class="letter-line">I like how naturally kind you seem.</p>
+            <p class="letter-line">Every time I thought about keeping these feelings to myself...</p>
+            <p class="letter-line">I ended up wanting to tell you instead.</p>
+            <p class="letter-line">I'm not expecting anything.</p>
+            <p class="letter-line">I just didn't want to miss the chance to let you know how I feel.</p>
+            <p class="letter-line">And if this is only the beginning of getting to know each other...</p>
+            <p class="letter-line">I'd be really happy about that.</p>
+            <p class="letter-signature">— Mayank</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SECTION 7 : NIGHT SKY -->
+    <!-- ============================= -->
+    <section class="panel night-panel" id="section-7" data-index="6">
+      <div class="stars" aria-hidden="true"></div>
+      <div class="moon" aria-hidden="true"></div>
+      <div class="shooting-star" aria-hidden="true"></div>
+      <div class="cloud-layer night-clouds" aria-hidden="true">
+        <div class="cloud cloud-night-a"></div>
+        <div class="cloud cloud-night-b"></div>
+      </div>
+      <div class="panel-content">
+        <p class="typewriter-line" id="typewriter" data-full="Sometimes... the best things begin with one honest conversation."></p>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- FINAL SECTION -->
+    <!-- ============================= -->
+    <section class="panel final-panel" id="section-final" data-index="7">
+      <div class="cloud-layer" aria-hidden="true">
+        <div class="cloud cloud-final-a"></div>
+        <div class="cloud cloud-final-b"></div>
+      </div>
+      <div class="rainbow" id="rainbow" aria-hidden="true"></div>
+      <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+
+      <div class="panel-content">
+        <div class="glass-card final-card">
+          <h2 class="final-so">So...</h2>
+          <h2 class="final-question">I know I will be happier and luckier than ever knowing I have you by my side.<br>Can I be your partner in everything ?</h2>
+
+          <div class="final-buttons" id="final-buttons">
+            <button class="btn-magnetic btn-yes" id="btn-yes">💖 Yes</button>
+            <button class="btn-magnetic btn-friends" id="btn-friends">🌸 I want some time</button>
+          </div>
+
+          <p class="final-response" id="final-response"></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================= -->
+  <!-- CDN LIBRARIES -->
+  <!-- Lenis is a nice-to-have smoothness layer only.
+       It is wrapped in try/catch in script.js, so if this CDN is ever
+       slow or blocked, the page still scrolls and animates normally
+       with plain native scroll + CSS transitions. -->
+  <!-- ============================= -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css" />
+  <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js" defer></script>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
